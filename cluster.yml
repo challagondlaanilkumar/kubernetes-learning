@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: roboshop-cluster
+  region: ap-south-1
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t2.large
+    desiredCapacity: 3
+    volumeSize: 80
+    ssh:
+      publicKeyName: docker
